@@ -28,16 +28,38 @@
                 border: 1px solid #000;
                 border-radius: .77rem;
                 cursor: pointer;
+                display: block;
+                margin: auto;
+                margin-bottom: 1rem;
+            }
+            select{
+                font-family: tahoma;
+                background-color: #FFF;
+                border: 1px solid #000;
+                border-radius: .77rem;
+                display: block;
+                margin: auto;
+                margin-bottom: 1rem;
             }
         </style>
     </head>
     <body>
         <div id="main-div">
             <h1>Generate Random HEX Color</h1>
-            <input type="button" value="Generate Random HEX color" id="generateHexColor">
-            <p>Color Preview:</p>
-            <div id="color-preview"></div>
+            <select id="color-select">
+                <option value="" disabled selected>Please select a type of random color to generate</option>
+                <option value="hex">Hex</option>
+                <option value="rgba">RGBA</option>
+                <option value="hsla">HSLA</option>
+            </select>
+            <input type="button" value="Generate Random HEX color" id="generateHexColor" style="display: none;">
+            <input type="button" value="Genearte Random RGBA color" id="generateRGBAColor" style="display: none;">
+            <input type="button" value="Genearte Random HSLA color" id="generateHSLAColor" style="display: none;">
+            <div style="display: none;">
+                <p>Color Preview:</p>
+                <div id="color-preview"></div>
+            </div>
         </div>
-        <script src="random_color_gen.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>

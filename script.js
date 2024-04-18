@@ -34,3 +34,13 @@ genHexBtn.addEventListener("click",function(){
     colorPreview.style.backgroundColor=randomColor;
     colorPreview.textContent=randomColor;
 })
+genRGBABtn.addEventListener("click",function(){
+    let randomColor=`rgba(${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)}, ${(Math.random()).toFixed(2)})`;
+    colorPreview.style.backgroundColor=randomColor;
+    colorPreview.textContent=randomColor;
+});
+genHSLABtn.addEventListener("click",function(){
+    let randomColor=`hsla(${Math.floor(Math.random()*360)}, ${Math.floor(Math.random()*101)}%, ${Math.floor(Math.random()*101)}%, ${(Math.random()).toFixed(2)})`;
+    colorPreview.style.backgroundColor=randomColor;
+    colorPreview.textContent=randomColor;
+});

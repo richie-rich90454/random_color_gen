@@ -14,7 +14,7 @@ random_color_gen/
 ├── index.html       # Main HTML file
 ├── script.js        # JavaScript logic for color generation
 ├── EBGaramond-VariableFont_wght.ttf   # Custom font file
-├── NotoSansSC-VariableFont_wght.ttf   # Custom font file
+├── NotoSans-VariableFont_wdth,wght.ttf   # Custom font file
 ├── README.md        # Project documentation (this file)
 └── package.json     # Project metadata and scripts
 ```
@@ -41,7 +41,7 @@ random_color_gen/
 3. View the generated color code and preview in the display box.
 4. Repeat to generate new random colors.
 ## Customization
-* **Fonts**: The UI uses `EB Garamond` for buttons and paragraphs, and `Noto Sans SC` for overall body text. Replace the `.ttf` files with your own to change fonts.
+* **Fonts**: The UI uses `EB Garamond` for buttons and paragraphs, and `Noto Sans` for overall body text. Replace the `.ttf` files with your own to change fonts.
 * **Styles**: Modify the CSS in `index.html` to adjust layout, borders, and other visual properties.
 * **Server**: The Fastify setup serves static files from the root directory. Update `script.js` or add new routes in `server.js` (or equivalent) to extend functionality.
 ## Technologies

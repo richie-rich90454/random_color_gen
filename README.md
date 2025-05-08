@@ -51,7 +51,7 @@ random_color_gen/
 * JavaScript (ES6+)
 * Fastify (Node.js web framework)
 ## License
-This project is released under the [MIT License](LICENSE) except for the fonts, which uses the OFL licenses listed below.
+This project is released under the [Apache-2.0 License](LICENSE) except for the fonts, which uses the OFL licenses listed below.
 ## Font Licenses
 ### OFL-EB\_Garamond
 Copyright 2017 The EB Garamond Project Authors ([https://github.com/octaviopardo/EBGaramond12](https://github.com/octaviopardo/EBGaramond12))

@@ -49,6 +49,7 @@ random_color_gen/
 ## Technologies
 * HTML5 & CSS3
 * JavaScript (ES6+)
+* jQuery - JavaScript library for DOM manipulation and smooth animations (version 3.6.0, sourced from https://code.jquery.com)
 * Fastify (Node.js web framework)
 ## License
 This project is released under the [Apache-2.0 License](LICENSE) except for the fonts, which uses the OFL licenses listed below.

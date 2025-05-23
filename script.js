@@ -19,7 +19,7 @@ colorSelect.change(function(){
     colorPreview.css("backgroundColor", "#FFF").text("");
 })
 genHexBtn.click(function(){
-    let randomColor=`#${Math.floor(Math.random()*16777215).toString(16)}`;
+    let randomColor=`#${Math.floor(Math.random()*16777215).toString(16).padStart(6, "0")}`;
     randomColor=randomColor.toUpperCase();
     colorPreview.fadeOut(function(){
         colorPreview.css("backgroundColor", randomColor).text(randomColor).fadeIn();

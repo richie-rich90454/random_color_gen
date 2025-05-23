@@ -8,15 +8,17 @@ colorSelect.change(function(){
     let colorValue=colorSelect.val();
     $("input[type='button']").hide();
     if (colorValue=="hex"){
-        genHexBtn.fadeIn();
+        genHexBtn.show();
+        colorPreview.css("backgroundColor", "#FFF").text("#FFFFFF");
     }
     else if (colorValue=="rgba"){
-        genRGBABtn.fadeIn();
+        genRGBABtn.show();
+        colorPreview.css("backgroundColor", "#FFF").text("rgba(255, 255, 255, 1)");
     }
     else if (colorValue=="hsla"){
-        genHSLABtn.fadeIn();
+        genHSLABtn.show();
+        colorPreview.css("backgroundColor", "#FFF").text("hsla(0, 0%, 100%, 1)");
     }
-    colorPreview.css("backgroundColor", "#FFF").text("");
 })
 genHexBtn.click(function(){
     let randomColor=`#${Math.floor(Math.random()*16777215).toString(16).padStart(6, "0")}`;

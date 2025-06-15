@@ -14,6 +14,32 @@
         </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer" onerror="useLocaljQuery()"></script>
         <style>
+            :root{
+                --text-color: #1A1A1A;
+                --bg-color: #FFF;
+                --border-color: #D1D1D7;
+                --button-bg: #F5F5F7;
+                --button-hover: #E5E5EB;
+                --card-bg: #FFF;
+                --shadow-color: rgba(0, 0, 0, .1);
+                --shadow-hover: rgba(0, 0, 0, .15);
+                --text-muted: #777;
+                color-scheme: light dark;
+            }
+            
+            @media (prefers-color-scheme: dark){
+                :root{
+                    --text-color: #F5F5F7;
+                    --bg-color: #1A1A1A;
+                    --border-color: #3A3A3C;
+                    --button-bg: #2C2C2E;
+                    --button-hover: #3A3A3C;
+                    --card-bg: #2C2C2E;
+                    --shadow-color: rgba(0, 0, 0, .3);
+                    --shadow-hover: rgba(0, 0, 0, .4);
+                    --text-muted: #A1A1A6;
+                }
+            }
             .flex{
                 display: flex;
             }
@@ -45,38 +71,20 @@
                 src: url("NotoSans-VariableFont_wdth\,wght.ttf");
                 font-weight: 1 1000;
             }
-            :root{
-                --text-color: #1A1A1A;
-                --bg-color: #FFF;
-                --border-color: #000;
-                --button-bg: #FFF;
-                --button-hover: #F0F0F0;
-            }
-            @media (prefers-color-scheme: dark){
-                :root{
-                    --text-color: #F0F0F0;
-                    --bg-color: #1A1A1A;
-                    --border-color: #F0F0F0;
-                    --button-bg: #3A3A3A;
-                    --button-hover: #4A4A4A;
-                }
-            }
             body{
-                word-wrap: break-word;
-                font-family: "Noto Sans";
+                font-family: "Noto Sans", sans-serif;
                 color: var(--text-color);
                 background-color: var(--bg-color);
                 min-height: 100vh;
-                margin: 0;
+                margin: 1rem;
                 padding: 0;
                 line-height: 1.6;
-                scroll-behavior: smooth;
+                transition: background-color .3s ease, color .3s ease;
             }
             #main-div{
-                text-align: center;
-                border-radius: .5rem;
-                border: 2px solid var(--border-color);
-                font-family: "Noto Sans";
+                background-color: var(--card-bg);
+                border-radius: 12px;
+                border: 1px solid var(--border-color);
                 width: 90%;
                 max-width: 600px;
                 min-height: 400px;
@@ -86,52 +94,66 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
+                box-shadow: 0 4px 12px var(--shadow-color);
+                transition: all .3s ease;
             }
             .color-preview{
-                font-family: "Noto Sans";
+                color: #000;
                 width: 100%;
                 max-width: 15rem;
                 height: 5rem;
-                border-radius: .5rem;
+                border-radius: 8px;
                 border: 1px solid var(--border-color);
                 margin: 1rem auto;
-                transition: background-color .3s ease;
+                transition: background-color .3s ease, border-color .3s ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 500;
+                text-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+                overflow: hidden;
             }
             input[type="button"]{
-                font-family: "EB Garamond";
+                font-family: "EB Garamond", serif;
                 background-color: var(--button-bg);
                 color: var(--text-color);
                 border: 1px solid var(--border-color);
-                border-radius: 1.5rem;
+                border-radius: 20px;
                 cursor: pointer;
                 display: block;
                 margin: 0 auto 1.5rem;
                 font-size: 1rem;
                 padding: .75rem 1.5rem;
                 transition: all .3s ease;
+                outline: none;
             }
             input[type="button"]:hover{
                 background-color: var(--button-hover);
                 transform: translateY(-2px);
-                box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+                box-shadow: 0 4px 8px var(--shadow-hover);
             }
             input[type="button"]:active{
                 transform: translateY(0);
-                box-shadow: none;
+                box-shadow: 0 2px 4px var(--shadow-hover);
+            }
+            
+            input[type="button"]:focus-visible{
+                box-shadow: 0 0 0 2px var(--text-color);
             }
             h1{
-                margin-top: 0;
-                margin-bottom: 1.5rem;
                 font-weight: 600;
+                font-size: 1.75rem;
+                text-align: center;
+                margin: 1.5rem auto;
             }
             p{
-                font-family: "EB Garamond";
+                font-family: "EB Garamond", serif;
                 margin: .5rem 0;
             }
             .color-format{
                 margin-bottom: .5rem;
                 font-weight: bold;
+                color: var(--text-color);
             }
             .preview-container{
                 display: flex;
@@ -160,21 +182,29 @@
             }
             @media (max-width: 480px){
                 #main-div{
-                    border: none;
-                    border-top: 1px solid var(--border-color);
-                    border-bottom: 1px solid var(--border-color);
                     border-radius: 0;
+                    border-left: none;
+                    border-right: none;
                     width: 100%;
                 }
                 .color-preview{
                     height: 4rem;
+                    font-size: .9rem;
+                }
+            }
+            @media (prefers-reduced-motion){
+                .transition, .color-preview, input[type="button"]{
+                    transition: none !important;
+                }
+                .smooth-scroll{
+                    scroll-behavior: auto !important;
                 }
             }
         </style>
     </head>
     <body class="smooth-scroll">
         <div id="main-div" class="flex flex-col justify-center">
-            <h1>Generate Random Color</h1>
+            <h1>Random Color Generator</h1>
             <input type="button" value="Generate Random Color" id="generateColor" class="transition">
             <div id="preview-group">
                 <div class="preview-container">

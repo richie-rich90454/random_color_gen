@@ -6,15 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="favicon.svg" type="image/svg+xml">
         <link rel="alternate icon" href="favicon.png">
-        <script>
-            function useLocaljQuery(){
-                let LocaljQuery=document.createElement("script");
-                LocaljQuery.src="jquery-3.7.1.js";
-                console.log("CDN failed, loading with local jQuery instead.");
-                document.head.appendChild(LocaljQuery);
-            }
-        </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer" onerror="useLocaljQuery()"></script>
         <style>
             :root{
                 --text-color: #1A1A1A;
@@ -205,6 +196,13 @@
             }
             p{
                 text-align: center;
+            }
+            .fade{
+                transition: opacity .15s ease;
+                opacity: 1;
+            }
+            .fade.hidden{
+                opacity: 0;
             }
         </style>
     </head>

@@ -1,38 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Random Color Generator</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="favicon.svg" type="image/svg+xml">
-        <link rel="alternate icon" href="favicon.png">
-        <link rel="stylesheet" href="style.min.css">
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+        <title>Random Color Generator - HEX, RGBA & HSLA | Free Online Color Tool</title>
+        <meta name="description" content="Generate random colors instantly in HEX, RGBA, and HSLA formats with live previews. A fast, free online color generator for designers and developers."/>
+        <meta name="keywords" content="random color generator, hex color tool, rgba color picker, hsla generator, css color tool, color randomizer"/>
+        <link rel="canonical" href="https://colorgen.richardsblogs.com"/>
+        <meta name="theme-color" content="#28465C"/>
+        <link rel="icon" href="https://colorgen.richardsblogs.com/favicon.svg" type="image/svg+xml"/>
+        <link rel="alternate icon" href="https://colorgen.richardsblogs.com/favicon.png"/>
+        <meta property="og:title" content="Random Color Generator - HEX, RGBA & HSLA"/>
+        <meta property="og:description" content="Generate random HEX, RGBA, and HSLA colors instantly with this free online tool."/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://colorgen.richardsblogs.com"/>
+        <meta property="og:image" content="https://colorgen.richardsblogs.com/favicon.png"/>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Random Color Generator",
+                "url": "https://colorgen.richardsblogs.com",
+                "description": "Generate random colors in HEX, RGBA, and HSLA with live previews.",
+                "applicationCategory": "DesignTool",
+                "operatingSystem": "All"
+            }
+        </script>
+        <link rel="stylesheet" href="style.min.css"/>
     </head>
-    <body class="smooth-scroll">
+    <body>
         <header id="site-header">
-            <h1>Random Color Generator</h1>
+            <div class="container">
+                <h1>Random Color Generator</h1>
+            </div>
         </header>
         <main id="main-content">
-            <section id="generator-section" class="flex flex-col items-center">
-                <input type="button" value="Press to Generate Random Color" id="generateColor" class="transition">
-                <div class="preview-group">
-                    <div class="preview-container">
-                        <p class="color-format">HEX (with Alpha):</p>
-                        <div class="color-preview transition" id="hex-preview"></div>
+            <div class="container">
+                <section id="generator-section">
+                    <p class="section-description">Press the button below to instantly generate a random color in three formats.</p>
+                    <input type="button" value="Generate Random Color" id="generateColor"/>
+                    <div class="preview-group">
+                        <div class="preview-container">
+                            <p class="color-format">HEX (with Alpha)</p>
+                            <div class="color-preview" id="hex-preview"></div>
+                        </div>
+                        <div class="preview-container">
+                            <p class="color-format">RGBA</p>
+                            <div class="color-preview" id="rgba-preview"></div>
+                        </div>
+                        <div class="preview-container">
+                            <p class="color-format">HSLA</p>
+                            <div class="color-preview" id="hsla-preview"></div>
+                        </div>
                     </div>
-                    <div class="preview-container">
-                        <p class="color-format">RGBA:</p>
-                        <div class="color-preview transition" id="rgba-preview"></div>
-                    </div>
-                    <div class="preview-container">
-                        <p class="color-format">HSLA:</p>
-                        <div class="color-preview transition" id="hsla-preview"></div>
-                    </div>
-                </div>
-            </section>
+                </section>
+                <section id="about-tool">
+                    <h2>About This Random Color Generator</h2>
+                    <p>This free tool creates completely random colors and displays them in HEX, RGBA, and HSLA formats. This generator helps you quickly produce unique color values for testing, theming, or creative inspiration for your needs.</p>
+                    <h3>What Color Formats Are Included?</h3>
+                    <ul>
+                        <li><strong>HEX (with Alpha):</strong> Common in web design and supports transparency.</li>
+                        <li><strong>RGBA:</strong> Red, green, blue, alpha — easy for CSS and JS.</li>
+                        <li><strong>HSLA:</strong> Hue-based format useful for design and theming.</li>
+                    </ul>
+                    <h3>How the Generator Works</h3>
+                    <p>Each time you press the button, the script randomly selects hue, saturation, lightness, and transparency values, then converts them to all three formats (HEX, RGBA, HSLA). The previews update instantly so you can see the color before copying it.</p>
+                    <h3>Frequently Asked Questions</h3>
+                    <h4>Could I copy the color values?</h4>
+                    <p>Yes. Just select the values in the color preview box and copy them.</p>
+                    <h4>Why use HSLA?</h4>
+                    <p>HSLA lets you adjust a color's hue, saturation, and lightness more intuitively, making it ideal for theming and design systems.</p>
+                    <h4>Is this tool free?</h4>
+                    <p>Yes — 100% free to use, no ads, no login.</p>
+                </section>
+            </div>
         </main>
         <footer id="site-footer">
-            <p>Main site: <a href="https://www.richardsblogs.com" target="_blank">www.richardsblogs.com</a></p>
+            <div class="container">
+                <p>
+                    Main site: <a href="https://www.richardsblogs.com" target="_blank" rel="noopener">
+                        www.richardsblogs.com</a>
+                </p>
+                <p>2025 Richard's Blogs</p>
+            </div>
         </footer>
         <script src="script.min.js"></script>
     </body>

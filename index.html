@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
-    <title>Random Color Generator</title>
+<html lang="en">
     <head>
+        <title>Random Color Generator</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -9,25 +9,31 @@
         <link rel="stylesheet" href="style.min.css">
     </head>
     <body class="smooth-scroll">
-        <div id="main-div" class="flex flex-col justify-center">
+        <header id="site-header">
             <h1>Random Color Generator</h1>
-            <input type="button" value="Generate Random Color" id="generateColor" class="transition">
+        </header>
+        <main id="main-content">
+            <section id="generator-section" class="flex flex-col items-center">
+                <input type="button" value="Press to Generate Random Color" id="generateColor" class="transition">
+                <div class="preview-group">
+                    <div class="preview-container">
+                        <p class="color-format">HEX (with Alpha):</p>
+                        <div class="color-preview transition" id="hex-preview"></div>
+                    </div>
+                    <div class="preview-container">
+                        <p class="color-format">RGBA:</p>
+                        <div class="color-preview transition" id="rgba-preview"></div>
+                    </div>
+                    <div class="preview-container">
+                        <p class="color-format">HSLA:</p>
+                        <div class="color-preview transition" id="hsla-preview"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer id="site-footer">
             <p>Main site: <a href="https://www.richardsblogs.com" target="_blank">www.richardsblogs.com</a></p>
-            <div id="preview-group">
-                <div class="preview-container">
-                    <p class="color-format">HEX (with Alpha):</p>
-                    <div class="color-preview transition" id="hex-preview"></div>
-                </div>
-                <div class="preview-container">
-                    <p class="color-format">RGBA:</p>
-                    <div class="color-preview transition" id="rgba-preview"></div>
-                </div>
-                <div class="preview-container">
-                    <p class="color-format">HSLA:</p>
-                    <div class="color-preview transition" id="hsla-preview"></div>
-                </div>
-            </div>
-        </div>
+        </footer>
         <script src="script.min.js"></script>
     </body>
 </html>

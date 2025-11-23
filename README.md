@@ -1,4 +1,4 @@
-## Overview of the Program
+## Overview of the Program available at [colorgen.richardsblogs.com](https://colorgen.richardsblogs.com)
 The program **Random Color Generator** is a lightweight, responsive web application that lets you generate fully random colors in three formats:
 * **Hex** (with alpha support): `#RRGGBB` (preview uses RGBA alpha)
 * **RGBA**: `rgba(r, g, b, a)`

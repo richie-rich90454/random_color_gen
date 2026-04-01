@@ -1,4 +1,3 @@
-//Use: "terser script.js -o script.min.js --compress --mangle" to compress the file (make the min file)
 updateColorDisplays(255, 255, 255, 1);
 document.getElementById("generateColor").addEventListener("click", ()=>{
     let red=Math.floor(Math.random()*255);

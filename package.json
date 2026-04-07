@@ -24,7 +24,7 @@
     "fastify": "^5.3.2"
   },
   "devDependencies": {
-    "vite": "^8.0.3",
+    "vite": "^8.0.5",
     "vite-plugin-html": "^3.2.2"
   }
 }
